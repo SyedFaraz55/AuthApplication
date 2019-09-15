@@ -1,0 +1,12 @@
+<% include ../partials/header %>
+<div class="container">
+    <% include ../partials/messages %>
+  <form action="/register" method="post">
+    <input type="text" name="name" placeholder="username" value="<%= typeof name!= 'undefined'?name:''%>"/>
+    <input type="text" placeholder="email" name="email" value="<%= typeof email!= 'undefined'?email:''%>"/>
+    <input type="password" placeholder="password" name="password" value="<%= typeof password!= 'undefined'?password:''%>"/>
+    <input type="password" placeholder="password2" name="password2" value="<%= typeof password2!= 'undefined'?password2:''%>"/>
+    <button type="submit">Register</button>
+  </form>
+</div>
+<% include ../partials/footer %>
